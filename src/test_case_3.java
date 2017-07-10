@@ -13,11 +13,10 @@ public class test_case_3 {
 
 	public static void main(String[] args) throws InterruptedException {
 		// TODO Auto-generated method stub
-        // This test case  searches any desired item  and adds the item to the Cart (Carrello) 
+       
+		// This test case  searches any desired product end choose it;
 		
-
-		
-		System.setProperty("webdriver.chrome.driver", "C:\\\\Users\\\\aless\\\\Downloads\\\\chromedriver_win32\\\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver", "C:\\\\SeleniumProperties\\\\chromedriver.exe");
 				
 				WebDriver driver =new ChromeDriver();
 				driver.get("http://www.etsy.com");
@@ -36,30 +35,14 @@ public class test_case_3 {
 				driver.findElement(By.xpath("//*[@id=\"gnav-search\"]/div/div[2]/button")).click();
 				
 				
-				/*boolean c=true;
-				c = wait2.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//*[@id=\"gnav-account-cart-description\"]"))).isDisplayed();
-				
-				if (c==true){*/
-				
-						//wait.until(ExpectedConditions.elementToBeClickable(driver.findElements(By.cssSelector("[src*=\".jpg\"]")).get(0)));
-				
-					
-						
-						//driver.findElements(By.cssSelector("[src*=\".jpg\"]")).get(0).click();
-					
-					
-				/*}
-				
-				else{
-					System.out.println("Cant find the Element ");
-				}*/
+			
 				WebDriverWait wait3 = new WebDriverWait(driver,10);
 				
 				Thread.sleep(5000);
-			    //WebElement imgSelects = wait3.until(ExpectedConditions.elementToBeClickable(driver.findElements(By.className("placeholder-content")).get(4)));
-			    
-				//WebElement imgSelects = wait3.until(ExpectedConditions.elementToBeClickable(driver.findElements(By.cssSelector("[src=\"https://img1.etsystatic.com/191/0/10431623/il_340x270.1282067381_17i5.jpg\"]")).get(0)));
+			    // This web page load a different page for different time
+			    // This is a problem to automate the web page
 				WebElement imgSelects=null;
+				// I have used a try catch method because there is been a problem to select the image;
 				try {
 						imgSelects = wait3.until(ExpectedConditions.visibilityOf(driver.findElements(By.
 						cssSelector("[src=\"https://img1.etsystatic.com/191/0/10431623/il_340x270.1282067381_17i5.jpg\"]")).get(0)));

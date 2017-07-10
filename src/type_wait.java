@@ -24,6 +24,7 @@ public class type_wait {
 			//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 			driver.get("http://www.phptravels.net/");
 			
+			
 		
 			// this wait using its methods reaches its timeout period until certain condition is satisfied;
 				
